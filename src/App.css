@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  text-align: center;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 300px; /* 或根据需要调整 */
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.iframe-container {
+  width: 95%; /* 调整为90% */
+  height: 100vh; /* 调整高度，您可以根据需要修改这个值 */
+  margin: 2px auto; /* 上下保留一些空间，并在页面中央显示 */
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.excel-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.app-container {
+  text-align: center;
+
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+.app-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.app-button:hover {
+  background-color: #45a049;
+}
+/* App.css */
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 2000px; /* 调整为更大的宽度 */
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.select {
+  padding: 10px;
+  margin: 10px 0;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.contentContainer {
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.loadingText {
+  color: #888;
+  text-align: center;
+}
+.tableContainer {
+  overflow-x: auto; /* 允许水平滚动 */
+  width: 100%; /* 扩展到容器的边界 */
+}
+
+table {
+  min-width: 10%;
+  border-collapse: collapse; /* 删除表格间的空隙 */
+}
+
+table, th, td {
+  border: 1px solid #ccc; /* 设置边框 */
+}
+
+th {
+  background-color: #4CAF50; /* Excel风格的绿色表头 */
+  color: white;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* 偶数行背景色 */
+}
+
+tr:hover {
+  background-color: #ddd; /* 鼠标悬停行背景色 */
+}
+.home-button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+}
+.input-field, .select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px; /* 保持边距一致 */
+  width: auto; /* 调整为自动宽度 */
+}
+
+.submit-button, .app-button, .home-button {
+  padding: 10px 15px; /* 微调内边距 */
+  border-radius: 4px;
+  margin-right: 10px; /* 添加右边距 */
+  font-size: 14px; /* 调整字体大小 */
+}
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 10px auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input-field, .select {
+    width: 100%; /* 移动设备上全宽度 */
+    margin-bottom: 10px; /* 增加底部边距 */
   }
+
+  .submit-button, .app-button, .home-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-message {
+  font-size: 3em; /* 增大字体大小 */
+  font-weight: bold;
+  margin-bottom: 20px; /* 调整间距 */
+  font-family: 'Arial', sans-serif;
+}
+
+.button-container {
+  text-align: center;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 使容器占满整个视口高度 */
+  text-align: center;
 }
